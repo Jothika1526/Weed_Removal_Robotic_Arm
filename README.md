@@ -280,6 +280,7 @@ Gradient wrt bias:
 $$
 \frac{\partial L}{\partial b} = \sum \frac{\partial L}{\partial a}
 $$
+
 ---
 ## Phase 5: Control using Hardware
 -  We Implemented the control part of our project by leveraging computer vision, machine learning, and robotic control. We used ufactory Lite 6 robotic arm with API based model inferencing.
