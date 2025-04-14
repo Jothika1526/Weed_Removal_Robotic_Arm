@@ -406,7 +406,9 @@ After receiving centroid coordinates from the AI model, the system applies the t
 
 - Extract centroid coordinates from the model's JSON output
 - Normalize the coordinates
-- >Need to add equation
+  >x1 = x/1000 * width of the image\
+  >y1 = y/1000 * height of the image\
+  >The normalization is necessary because the model returns bounding box coordinates relative to a 1000-scale reference. You must scale them back to the actual image dimensions to get correct pixel coordinates for detection, visualization, or mapping to real-world positions.
 - Apply the transformation using the calibration parameters
 - Pass the transformed coordinates to the robot control system
 
