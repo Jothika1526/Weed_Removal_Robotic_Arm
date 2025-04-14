@@ -1,6 +1,15 @@
 # Precision Weed Removal using OpenManipulator-X
 
-## Final Review – 22MAT230 & 22AIE214
+## 22MAT230 & 22AIE214
+
+##  Team B-12
+
+1. **Vishal S** – CB.SC.U4AIE23160  
+2. **Meenakshi Sareesh** – CB.SC.U4AIE23144  
+3. **Archith** – CB.SC.U4AIE23105  
+4. **Jothika K** – CB.SC.U4AIE23133
+
+---
 
 This project aims to develop a precision weed removal system using the OpenManipulator-X robotic arm. The system is designed to work within a simulated agricultural environment, integrating computer vision, machine learning, and robotic kinematics to detect and remove weeds efficiently. Our objective is to explore a low-cost, autonomous solution for modern farming challenges by combining:
 
@@ -11,13 +20,6 @@ This project aims to develop a precision weed removal system using the OpenManip
 - **System Integration**: Creating a cohesive autonomous system capable of identifying, classifying, and eliminating weeds.
 
 ---
-
-##  Team B-12
-
-1. **Vishal S** – CB.SC.U4AIE23160  
-2. **Meenakshi Sareesh** – CB.SC.U4AIE23144  
-3. **Archith** – CB.SC.U4AIE23105  
-4. **Jothika K** – CB.SC.U4AIE23133
 
 ##  Literature Review
 
