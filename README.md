@@ -12,12 +12,24 @@ This project aims to develop a precision weed removal system using the OpenManip
 
 ---
 
-## 👥 Team B-12
+##  Team B-12
 
 1. **Vishal S** – CB.SC.U4AIE23160  
 2. **Meenakshi Sareesh** – CB.SC.U4AIE23144  
 3. **Archith** – CB.SC.U4AIE23105  
 4. **Jothika K** – CB.SC.U4AIE23133
+
+##  Literature Review
+
+| **TITLE** | **LINK** | **OBSERVATION** |
+|-----------|----------|-----------------|
+| **Bilateral Teleoperation with a Shared Design of Master and Slave Devices for Robotic Excavators in Agricultural Applications** | [Link](https://cme.h-its.org/exelixis/web/teaching/seminar2016/Example2.pdf) | • Developed a 4-DOF OpenManipulator-X-based robot arm with master-slave kinematics using DH parameters and delay compensation algorithms. <br> • Achieved 80–100% alignment precision; validated via MATLAB simulation. <br> • Laid groundwork for teleoperation and forward kinematics in simulated agricultural applications. |
+| **Design and Development of GMapping-based SLAM Algorithm in Virtual Agricultural Environment** | [Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9530991) | • Created 3D virtual environments in Blender and simulated Turtlebot3 with OpenManipulator-X using GMapping SLAM (RBPF). <br> • Tested mapping accuracy across complexities; directly supports simulation and environment mapping in our project. |
+| **Technology for Automation of Weed Control in Specialty Crops – Fennimore et al., 2016** | [Link](https://www.cambridge.org/core/journals/weed-technology/article/technology-for-automation-of-weed-control-in-specialty-crops/795CD08C90935A3BAEA47D71708AD302) | • Showcased systems like Robovator and Steketee IC with >80% accuracy. <br> • Emphasized shape-specific weeding tools and actuator adaptation. <br> • Provided insights for low-cost weed-removal module design. |
+| **Vision-Based Object Manipulation for Activities of Daily Living Assistance Using Assistive Robot – Shahria et al., 2024** | [Link](https://www.mdpi.com/2673-4052/5/2/6) | • Used YOLOv5s for object detection, Intel RealSense D435 for 3D localization, and xArm6 for inverse kinematics. <br> • Demonstrated real-time robotic manipulation pipeline relevant for weed detection and picking in our setup. |
+| **Automation of Agricultural Tasks using Deep Learning-based Weed Detection** | *No link shown in screenshot* | • Applied deep learning methods like CNNs for real-time weed vs. crop image classification. <br> • Showed how pixel-level segmentation could support automated weed removal and data labeling. |
+| **Development of Autonomous Farming Robot using Raspberry Pi and OpenCV** | *No link shown in screenshot* | • Designed a low-cost robot for smart farming using Raspberry Pi and computer vision. <br> • Relevant to our project's focus on cost-effective hardware integration for weed removal. |
+
 
 # OpenManipulator-X
 
