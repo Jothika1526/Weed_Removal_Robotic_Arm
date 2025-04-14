@@ -434,7 +434,7 @@ We used the UFactory Lite 6 robotic arm to demonstrate real-time manipulation. W
 
 ### 🔧 Forward Kinematics Simulation
 
-[▶ Watch FK Simulation](./images/fk_simulation.mp4)
+[▶ Watch FK Simulation](https://drive.google.com/file/d/1jU5ck_5M-qHD9YUHteU_DAh7jsPpTvwi/view?usp=sharing)
 
 This video demonstrates the execution of forward kinematics in a simulated environment, showcasing the correct computation of joint positions and movement.
 
