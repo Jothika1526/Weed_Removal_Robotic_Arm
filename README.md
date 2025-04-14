@@ -1,3 +1,24 @@
+# Precision Weed Removal using OpenManipulator-X
+
+## Final Review – 22MAT230 & 22AIE214
+
+This project aims to develop a precision weed removal system using the OpenManipulator-X robotic arm. The system is designed to work within a simulated agricultural environment, integrating computer vision, machine learning, and robotic kinematics to detect and remove weeds efficiently. Our objective is to explore a low-cost, autonomous solution for modern farming challenges by combining:
+
+- **Simulated Agricultural Environment**: Featuring realistic 3D models of crops and weeds in a physics-based simulation.
+- **Manipulator Kinematics**: Applying both forward and inverse kinematics using OpenManipulator-X to enable accurate motion planning.
+- **Weed Detection Model**: Training a machine learning model using image data collected from a virtual camera in the simulation.
+- **Cost-Effective Weed Removal**: Designing innovative removal strategies with minimal hardware overhead.
+- **System Integration**: Creating a cohesive autonomous system capable of identifying, classifying, and eliminating weeds.
+
+---
+
+## 👥 Team B-12
+
+1. **Vishal S** – CB.SC.U4AIE23160  
+2. **Meenakshi Sareesh** – CB.SC.U4AIE23144  
+3. **Archith** – CB.SC.U4AIE23105  
+4. **Jothika K** – CB.SC.U4AIE23133
+
 # OpenManipulator-X
 
 The **OpenManipulator-X** is a versatile, open-source robotic arm developed by ROBOTIS, designed to support research, education, and hobbyist robotics projects. Built with modularity and ROS (Robot Operating System) compatibility in mind, it provides an excellent platform for automation and precision-based tasks such as agricultural applications, including precision weed removal.
