@@ -112,8 +112,7 @@ This phase focuses on training a computer vision model to accurately detect and 
 - **Output**: Trained model that predicts:
   - Bounding boxes around weeds in a new image.
   - Corresponding class label (e.g., "weed").
-- **Confidence score for each detection.**-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+    
 #### Extracting 2D Coordinates
 - For each weed detected, the model outputs the **(x, y)** pixel coordinates of the bounding box center in the image frame.
 - These coordinates represent the weed’s location in 2D image space, which will later be used for spatial mapping and targeted removal.
