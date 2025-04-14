@@ -1,3 +1,37 @@
+# Precision Weed Removal using OpenManipulator-X
+
+## 22MAT230 & 22AIE214
+
+##  Team B-12
+
+1. **Vishal S** – CB.SC.U4AIE23160  
+2. **Meenakshi Sareesh** – CB.SC.U4AIE23144  
+3. **Archith** – CB.SC.U4AIE23105  
+4. **Jothika K** – CB.SC.U4AIE23133
+
+---
+
+This project aims to develop a precision weed removal system using the OpenManipulator-X robotic arm. The system is designed to work within a simulated agricultural environment, integrating computer vision, machine learning, and robotic kinematics to detect and remove weeds efficiently. Our objective is to explore a low-cost, autonomous solution for modern farming challenges by combining:
+
+- **Simulated Agricultural Environment**: Featuring realistic 3D models of crops and weeds in a physics-based simulation.
+- **Manipulator Kinematics**: Applying both forward and inverse kinematics using OpenManipulator-X to enable accurate motion planning.
+- **Weed Detection Model**: Training a machine learning model using image data collected from a virtual camera in the simulation.
+- **Cost-Effective Weed Removal**: Designing innovative removal strategies with minimal hardware overhead.
+- **System Integration**: Creating a cohesive autonomous system capable of identifying, classifying, and eliminating weeds.
+
+---
+
+##  Literature Review
+
+| **TITLE** | **LINK** | **OBSERVATION** |
+|-----------|----------|-----------------|
+| **Bilateral Teleoperation with a Shared Design of Master and Slave Devices for Robotic Excavators in Agricultural Applications** | [Link](https://cme.h-its.org/exelixis/web/teaching/seminar2016/Example2.pdf) | • Developed a 4-DOF OpenManipulator-X-based robot arm with master-slave kinematics using DH parameters and delay compensation algorithms. <br> • Achieved 80–100% alignment precision; validated via MATLAB simulation. <br> • Laid groundwork for teleoperation and forward kinematics in simulated agricultural applications. |
+| **Design and Development of GMapping-based SLAM Algorithm in Virtual Agricultural Environment** | [Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9530991) | • Created 3D virtual environments in Blender and simulated Turtlebot3 with OpenManipulator-X using GMapping SLAM (RBPF). <br> • Tested mapping accuracy across complexities; directly supports simulation and environment mapping in our project. |
+| **Technology for Automation of Weed Control in Specialty Crops – Fennimore et al., 2016** | [Link](https://www.cambridge.org/core/journals/weed-technology/article/technology-for-automation-of-weed-control-in-specialty-crops/795CD08C90935A3BAEA47D71708AD302) | • Showcased systems like Robovator and Steketee IC with >80% accuracy. <br> • Emphasized shape-specific weeding tools and actuator adaptation. <br> • Provided insights for low-cost weed-removal module design. |
+| **Vision-Based Object Manipulation for Activities of Daily Living Assistance Using Assistive Robot – Shahria et al., 2024** | [Link](https://www.mdpi.com/2673-4052/5/2/6) | • Used YOLOv5s for object detection, Intel RealSense D435 for 3D localization, and xArm6 for inverse kinematics. <br> • Demonstrated real-time robotic manipulation pipeline relevant for weed detection and picking in our setup. |
+| **Automation of Agricultural Tasks using Deep Learning-based Weed Detection** | [Link](https://www.elsevier.com/locate/compag) | • Applied deep learning methods like CNNs for real-time weed vs. crop image classification. <br> • Showed how pixel-level segmentation could support automated weed removal and data labeling. |
+| **Development of Autonomous Farming Robot using Raspberry Pi and OpenCV** | [Link](https://www.elsevier.com/locate/cropro) | • Designed a low-cost robot for smart farming using Raspberry Pi and computer vision. <br> • Relevant to our project's focus on cost-effective hardware integration for weed removal. |
+
 # OpenManipulator-X
 
 The **OpenManipulator-X** is a versatile, open-source robotic arm developed by ROBOTIS, designed to support research, education, and hobbyist robotics projects. Built with modularity and ROS (Robot Operating System) compatibility in mind, it provides an excellent platform for automation and precision-based tasks such as agricultural applications, including precision weed removal.
@@ -78,7 +112,7 @@ This phase focuses on training a computer vision model to accurately detect and 
 - **Output**: Trained model that predicts:
   - Bounding boxes around weeds in a new image.
   - Corresponding class label (e.g., "weed").
-
+    
 #### Extracting 2D Coordinates
 - For each weed detected, the model outputs the **(x, y)** pixel coordinates of the bounding box center in the image frame.
 - These coordinates represent the weed’s location in 2D image space, which will later be used for spatial mapping and targeted removal.
@@ -248,32 +282,6 @@ $$
 $$
 
 ---
-
-## **Adam Optimizer**
-
-Moments:
-
-$$
-m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t
-$$
-
-$$
-v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2
-$$
-
-Bias correction:
-
-$$
-\hat{m_t} = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v_t} = \frac{v_t}{1 - \beta_2^t}
-$$
-
-Update rule:
-
-$$
-W_t = W_{t-1} - \alpha \cdot \frac{\hat{m_t}}{\sqrt{\hat{v_t}} + \epsilon}
-$$
-
----
 ## Phase 5: Control using Hardware
 -  We Implemented the control part of our project by leveraging computer vision, machine learning, and robotic control. We used ufactory Lite 6 robotic arm with API based model inferencing.
 ## Hardware Components
@@ -371,7 +379,9 @@ After receiving centroid coordinates from the AI model, the system applies the t
 
 - Extract centroid coordinates from the model's JSON output
 - Normalize the coordinates
-- >Need to add equation
+  >x1 = x/1000 * width of the image\
+  >y1 = y/1000 * height of the image\
+  >The normalization is necessary because the model returns bounding box coordinates relative to a 1000-scale reference. You must scale them back to the actual image dimensions to get correct pixel coordinates for detection, visualization, or mapping to real-world positions.
 - Apply the transformation using the calibration parameters
 - Pass the transformed coordinates to the robot control system
 
@@ -389,3 +399,85 @@ Pick and place was achieved in this project via a pick and place function which 
 We succesfully implemented control and made use of model inferencing to enhance vision capabilities. We devoloped a complete end-to-end pipeline from perception to action. This project is a flexible automation that can adapt to variations in object placement.
 
 ------
+
+## 📊 RESULTS AND DISCUSSION
+
+### 🔧 Forward Kinematics
+![Forward Kinematics](./images/fk.png)  
+We implemented forward kinematics from scratch using user input joint angles to compute the transformation matrix from base to end-effector. This validated our robotic arm's positional accuracy in simulation.
+
+### 🔁 Inverse Kinematics
+![Inverse Kinematics - Total Loss (from scratch implementation)](./images/scratch_loss.jpg)  
+![Inverse Kinematics - Total loss in Built-in](./images/inbuilt_Testing_loss.png)  
+We implemented inverse kinematics both from scratch and using Inbuilt neural network model. The outputs were closely matched, demonstrating both accuracy and reliability in reaching target end-effector poses.
+
+### 🌱 Crop Environment in Gazebo
+![Crop Environment](./images/crop_env1.png) 
+![Crop Environment](./images/crop_env2.png)
+A synthetic farm environment was generated using artichoke as the crop and a custom-generated weed model. This was essential for training the object detection model under realistic field conditions.
+
+### 🎯 YOLO-based Weed Detection
+![YOLO Detection](./images/YOLO_LOSS.jpg)  
+*The total loss reduced over time is shown above.Total validation loss ~4.44*
+
+![YOLO Detection](./images/YOLO_PERFORMANCE.jpg)  
+*Given above is the model's performance.*
+
+We trained a YOLOv5 model on images from the Gazebo environment. The model successfully distinguished weeds from crops in various scenarios, enabling precise targeting for removal.
+
+### 🤖 Control Hardware – UFactory Lite 6
+![Hardware Setup](./images/control_hardware.png)  
+We used the UFactory Lite 6 robotic arm to demonstrate real-time manipulation. While actual weed removal was not performed, the robot could detect and pick predefined color-coded cubes. We enhanced vision using an AI model integrated via Groq API with Meta’s Llama 4 Scout for intelligent decision-making.
+
+---
+## 🎥 DEMO OF SIMULATION AND HARDWARE
+
+### 🔧 Forward Kinematics Simulation
+
+[▶ Watch FK Simulation](./images/fk_simulation.mp4)
+
+This video demonstrates the execution of forward kinematics in a simulated environment, showcasing the correct computation of joint positions and movement.
+
+---
+
+### 🤖 Robotic Arm Control Demonstration
+
+[▶ Watch Hardware Control Demo](https://drive.google.com/file/d/1rPQ68ztTQF2OTD6pu8OEx6vQweWNoVDC/view?usp=sharing)
+
+Here, the UFactory Lite 6 robotic arm performs basic manipulation using AI-enhanced decision-making. This serves as proof of concept for potential future implementation in real-world weed removal scenarios.
+
+## CONCLUSION
+
+The project **"Weed Removal Using OpenManipulator X"** successfully explores the integration of simulation and control in the context of robotic weed management. The simulation phase included a comprehensive environment setup in Gazebo, implementation of forward and inverse kinematics, and training of a YOLO-based object detection model for weed identification. This phase effectively demonstrated the conceptual viability of using robotic arms for precision weed detection and removal in agricultural scenarios.
+
+To validate the control aspect in a real-world setup, the **UFactory Lite 6 robotic arm** was employed. Although it was not used for actual weed detection, it was instrumental in demonstrating the control and manipulation capabilities of a physical robotic arm. The system was able to identify and interact with predefined colored cubes, successfully performing pick-and-place operations. This control demonstration bridged the gap between simulation and physical execution, highlighting the feasibility of real-time robotic arm actuation based on processed input.Eventhough, we planned the control part for simple pick and place we soon found that by leveraging an AI model which excels in vision tasks, we were able to elevate the quality of this project. We implemented API-based inference by integrating the Groq API to interact with the meta-llama/llama-4-scout-17b-16e-instruct model. Meta's Llama 4 Scout is a 17 billion parameter model with 16 experts that is natively multimodal.
+
+---
+
+## FUTURE SCOPE
+
+The current project lays the groundwork for future research and development in automated agricultural robotics. The following extensions can be pursued:
+
+- **Full Hardware Integration:** Integrating the trained YOLO model and kinematics with the UFactory Lite 6 or a field-ready robotic arm to enable real-time weed detection and removal in physical settings.
+
+- **Outdoor Deployment and Testing:** Transitioning the simulation setup to real agricultural fields will help test system robustness under natural lighting, soil variability, and environmental noise.
+
+- **Enhanced Object Detection Models:** Improving the object detection model to handle multiple crop and weed types, including partially occluded plants, will increase system accuracy and adaptability.
+
+- **Mobile Robotic Platform:** Mounting the robotic arm on a mobile base with navigation capabilities can allow autonomous traversal of farmlands and large-scale weed removal operations.
+
+- **Adaptive Control and Feedback:** Incorporating real-time feedback mechanisms and adaptive control algorithms can improve motion precision and fault tolerance.
+
+## 📚 REFERENCES
+
+1. **[OpenManipulator X – Overview](https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/)**  
+   This official documentation outlines the structure, features, and control mechanisms of the OpenManipulator X. It helped us understand the hardware specifications and guided the setup for simulating forward and inverse kinematics.
+
+2. **[Crop Models – Automatic Row Crop Generator](https://github.com/PIC4SeR/AutomaticRowCropGenerator/tree/master)**  
+   This repository contains a collection of crop models and tools to generate row crop patterns in Gazebo. It was useful in creating realistic agricultural environments for simulating weed detection using object detection models.
+
+3. **[Gazebo Simulation with OpenManipulator X](https://emanual.robotis.com/docs/en/platform/openmanipulator_x/ros_simulation/#launch-gazebo)**  
+   This page provides step-by-step instructions to simulate OpenManipulator X in Gazebo using ROS. It played a key role in launching the simulation environment and testing robotic movement and detection coordination.
+
+4. **[xArm Python SDK – Control Hardware](https://github.com/xArm-Developer/xArm-Python-SDK)**  
+   The SDK offers Python-based control for UFactory robotic arms like Lite 6. It enabled us to implement control logic for pick-and-place operations, demonstrating the hardware feasibility of the simulated actions.
