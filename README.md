@@ -280,33 +280,6 @@ Gradient wrt bias:
 $$
 \frac{\partial L}{\partial b} = \sum \frac{\partial L}{\partial a}
 $$
-
----
-
-## **Adam Optimizer**
-
-Moments:
-
-$$
-m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t
-$$
-
-$$
-v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2
-$$
-
-Bias correction:
-
-$$
-\hat{m_t} = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v_t} = \frac{v_t}{1 - \beta_2^t}
-$$
-
-Update rule:
-
-$$
-W_t = W_{t-1} - \alpha \cdot \frac{\hat{m_t}}{\sqrt{\hat{v_t}} + \epsilon}
-$$
-
 ---
 ## Phase 5: Control using Hardware
 -  We Implemented the control part of our project by leveraging computer vision, machine learning, and robotic control. We used ufactory Lite 6 robotic arm with API based model inferencing.
