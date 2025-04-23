@@ -24,7 +24,7 @@ This project aims to develop a precision weed removal system using the OpenManip
 # Table of Contents
 - [Introduction](#introduction)
 - [Literature Review](#literature-review)
-- [Manipulator](#manipulator)
+- [OpenManipulator-X](#OpenManipulator-X)
 - [Methodology & Implementation](#methodology--implementation)
 - [Results and Discussion](#results-and-discussion)
 - [Demo](#demo)
