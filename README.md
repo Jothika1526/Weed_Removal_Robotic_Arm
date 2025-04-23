@@ -25,7 +25,7 @@ This project aims to develop a precision weed removal system using the OpenManip
 
 Weed management remains one of the most labor-intensive and cost-heavy challenges in agriculture. Conventional approaches, often reliant on chemical herbicides or manual intervention, pose significant drawbacks—ranging from environmental degradation to unsustainable labor demands.
 
-## 💡 Project Overview
+### 💡 Project Overview
 
 To address this, our project proposes an intelligent, vision-guided robotic system capable of precision weed detection and removal in agricultural environments.
 
