@@ -27,8 +27,9 @@ This project aims to develop a precision weed removal system using the OpenManip
 - [OpenManipulator-X](#OpenManipulator-X)
 - [Methodology & Implementation](#methodology--implementation)
 - [Results and Discussion](#results-and-discussion)
-- [Demo](#demo)
-- [Conclusion and Future Work](#conclusion-and-future-work)
+- [Demo of simulation and hardware](#demo=of-simulation-and-hardware)
+- [Conclusion](#conclusion)
+- [Future Scope](#future-scope)
 - [References](#references)
 ---
 ## Introduction
@@ -419,7 +420,7 @@ We succesfully implemented control and made use of model inferencing to enhance 
 
 ------
 
-## 📊 RESULTS AND DISCUSSION
+## Results and Discussion
 
 ### 🔧 Forward Kinematics
 ![Forward Kinematics](./images/fk.png)  
