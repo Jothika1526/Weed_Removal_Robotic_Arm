@@ -21,6 +21,16 @@ This project aims to develop a precision weed removal system using the OpenManip
 - **System Integration**: Creating a cohesive autonomous system capable of identifying, classifying, and eliminating weeds.
 
 ---
+# Table of Contents
+- [Introduction](#introduction)
+- [Literature Review](#literature-review)
+- [Manipulator](#manipulator)
+- [Methodology & Implementation](#methodology--implementation)
+- [Results and Discussion](#results-and-discussion)
+- [Demo](#demo)
+- [Conclusion and Future Work](#conclusion-and-future-work)
+- [References](#references)
+---
 ## Introduction
 
 Weed management remains one of the most labor-intensive and cost-heavy challenges in agriculture. Conventional approaches, often reliant on chemical herbicides or manual intervention, pose significant drawbacks—ranging from environmental degradation to unsustainable labor demands.
