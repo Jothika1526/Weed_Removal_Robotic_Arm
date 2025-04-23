@@ -450,7 +450,7 @@ We trained a YOLOv5 model on images from the Gazebo environment. The model succe
 We used the UFactory Lite 6 robotic arm to demonstrate real-time manipulation. While actual weed removal was not performed, the robot could detect and pick predefined color-coded cubes. We enhanced vision using an AI model integrated via Groq API with Meta’s Llama 4 Scout for intelligent decision-making.
 
 ---
-## DEMO OF SIMULATION AND HARDWARE
+## Demo of Simulation and Hardware
 
 ### 🔧 Forward Kinematics Simulation
 
@@ -466,7 +466,7 @@ This video demonstrates the execution of forward kinematics in a simulated envir
 
 Here, the UFactory Lite 6 robotic arm performs basic manipulation using AI-enhanced decision-making. This serves as proof of concept for potential future implementation in real-world weed removal scenarios.
 
-## CONCLUSION
+## Conclusion
 
 The project **"Weed Removal Using OpenManipulator X"** successfully explores the integration of simulation and control in the context of robotic weed management. The simulation phase included a comprehensive environment setup in Gazebo, implementation of forward and inverse kinematics, and training of a YOLO-based object detection model for weed identification. This phase effectively demonstrated the conceptual viability of using robotic arms for precision weed detection and removal in agricultural scenarios.
 
@@ -474,7 +474,7 @@ To validate the control aspect in a real-world setup, the **UFactory Lite 6 robo
 
 ---
 
-## FUTURE SCOPE
+## Future Scope
 
 The current project lays the groundwork for future research and development in automated agricultural robotics. The following extensions can be pursued:
 
