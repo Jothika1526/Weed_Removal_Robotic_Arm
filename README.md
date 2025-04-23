@@ -450,7 +450,7 @@ We trained a YOLOv5 model on images from the Gazebo environment. The model succe
 We used the UFactory Lite 6 robotic arm to demonstrate real-time manipulation. While actual weed removal was not performed, the robot could detect and pick predefined color-coded cubes. We enhanced vision using an AI model integrated via Groq API with Meta’s Llama 4 Scout for intelligent decision-making.
 
 ---
-## 🎥 DEMO OF SIMULATION AND HARDWARE
+## DEMO OF SIMULATION AND HARDWARE
 
 ### 🔧 Forward Kinematics Simulation
 
@@ -488,7 +488,7 @@ The current project lays the groundwork for future research and development in a
 
 - **Adaptive Control and Feedback:** Incorporating real-time feedback mechanisms and adaptive control algorithms can improve motion precision and fault tolerance.
 
-## 📚 REFERENCES
+## REFERENCES
 
 1. **[OpenManipulator X – Overview](https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/)**  
    This official documentation outlines the structure, features, and control mechanisms of the OpenManipulator X. It helped us understand the hardware specifications and guided the setup for simulating forward and inverse kinematics.
