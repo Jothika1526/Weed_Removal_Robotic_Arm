@@ -33,7 +33,7 @@ This system leverages simulation-driven development, advanced computer vision, a
 
 Our methodology showcases a full-stack robotics pipeline—from simulation to deployment—providing a cost-effective and eco-friendly alternative to traditional weed control.
 
-
+---
 ##  Literature Review
 
 | **TITLE** | **LINK** | **OBSERVATION** |
