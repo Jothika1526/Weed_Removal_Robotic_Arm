@@ -99,7 +99,7 @@ The image below shows the OpenManipulator-X as visualized in **RViz**, highlight
 
 ![URDF in RViz](./images/2.png)
 ---
-# Methodology
+# Methodology & Implementation
 
 ### Phase 1: Simulation Setup
 
