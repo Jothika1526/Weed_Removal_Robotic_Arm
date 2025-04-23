@@ -44,7 +44,7 @@ Our methodology showcases a full-stack robotics pipeline—from simulation to de
 | **Vision-Based Object Manipulation for Activities of Daily Living Assistance Using Assistive Robot – Shahria et al., 2024** | [Link](https://www.mdpi.com/2673-4052/5/2/6) | • Used YOLOv5s for object detection, Intel RealSense D435 for 3D localization, and xArm6 for inverse kinematics. <br> • Demonstrated real-time robotic manipulation pipeline relevant for weed detection and picking in our setup. |
 | **Automation of Agricultural Tasks using Deep Learning-based Weed Detection** | [Link](https://www.elsevier.com/locate/compag) | • Applied deep learning methods like CNNs for real-time weed vs. crop image classification. <br> • Showed how pixel-level segmentation could support automated weed removal and data labeling. |
 | **Development of Autonomous Farming Robot using Raspberry Pi** | [Link](https://ieeexplore.ieee.org/document/10001745) | • Designed a low-cost robot for smart farming using Raspberry Pi and computer vision. <br> • Relevant to our project's focus on cost-effective hardware integration for weed removal. |
-
+---
 # OpenManipulator-X
 
 The **OpenManipulator-X** is a versatile, open-source robotic arm developed by ROBOTIS, designed to support research, education, and hobbyist robotics projects. Built with modularity and ROS (Robot Operating System) compatibility in mind, it provides an excellent platform for automation and precision-based tasks such as agricultural applications, including precision weed removal.
@@ -88,7 +88,7 @@ Before analyzing the URDF breakdown, it's important to comprehend the hierarchic
 The image below shows the OpenManipulator-X as visualized in **RViz**, highlighting the joint positions, link alignments, and structure layout.
 
 ![URDF in RViz](./images/2.png)
-
+---
 # Methodology
 
 ### Phase 1: Simulation Setup
