@@ -10,6 +10,7 @@
 4. **Jothika K** – CB.SC.U4AIE23133
 
 ---
+## Abstract
 
 This project aims to develop a precision weed removal system using the OpenManipulator-X robotic arm. The system is designed to work within a simulated agricultural environment, integrating computer vision, machine learning, and robotic kinematics to detect and remove weeds efficiently. Our objective is to explore a low-cost, autonomous solution for modern farming challenges by combining:
 
@@ -142,10 +143,6 @@ To compute the position of the end-effector:
 1. Begin from the base frame of the robot.
 2. Apply the transformation matrix for each joint sequentially, starting from the base and moving up to the end-effector.
 3. Multiply all the transformation matrices in order to get the final transformation from the base to the end-effector frame.
-
-
-**T_total = T1 × T2 × T3 × T4 × T5**
-
 
 This cumulative matrix provides the **position and orientation** of the end-effector in the world coordinate frame.
 
