@@ -21,6 +21,18 @@ This project aims to develop a precision weed removal system using the OpenManip
 - **System Integration**: Creating a cohesive autonomous system capable of identifying, classifying, and eliminating weeds.
 
 ---
+## Introduction
+
+Weed management remains one of the most labor-intensive and cost-heavy challenges in agriculture. Conventional approaches, often reliant on chemical herbicides or manual intervention, pose significant drawbacks—ranging from environmental degradation to unsustainable labor demands.
+
+## 💡 Project Overview
+
+To address this, our project proposes an intelligent, vision-guided robotic system capable of precision weed detection and removal in agricultural environments.
+
+This system leverages simulation-driven development, advanced computer vision, and robotic control to build a scalable solution for autonomous weed removal. It begins with virtual prototyping using OpenManipulatorX, ROS2, and Gazebo to simulate a realistic agricultural field populated with crops and weeds. A deep learning model is trained to detect weeds based on real-world imagery, which feeds location data into a robotic manipulator. By integrating both forward and inverse kinematics, the system calculates precise joint configurations to reach each detected weed. The final phase transitions this virtual strategy into the real world using the uFactory Lite 6 robotic arm and a custom-trained neural network to perform targeted weed removal.
+
+Our methodology showcases a full-stack robotics pipeline—from simulation to deployment—providing a cost-effective and eco-friendly alternative to traditional weed control.
+
 
 ##  Literature Review
 
